@@ -20,3 +20,24 @@ let wizard: object = {
 // null and undefined
 let meh: undefined = undefined
 let noo: null = null
+
+// Tuple
+let basket: [string, number]
+basket = ['basketball', 5]
+
+// Enum
+enum Size {Small = 1, Medium = 2, Large = 3}
+let sizeName: number = Size.Small
+
+// Any
+let whatever: any = 'aghhhhh noooooo!!!'
+
+// void
+let sing = (): void => {
+    console.log('la la la la la la la')
+}
+
+// never
+let error = (): never => {
+    throw Error('Ooops')
+}
