@@ -36,3 +36,40 @@ var sing = function () {
 var error = function () {
     throw Error('Ooops');
 };
+var fightRobotArmy = function (robots) {
+    console.log('Fight!!');
+};
+var getRectangleAreaInterface = function (args) { return args.x * args.y; };
+var getRectangleAreaAliased = function (args) { return args.x * args.y; };
+getRectangleAreaInterface({ x: 12, y: 7 });
+getRectangleAreaAliased({ x: 12, y: 7 });
+// use type alias for implementing a Class constraint
+var Rectangle = /** @class */ (function () {
+    function Rectangle() {
+        this.x = 2;
+        this.y = 4;
+    }
+    return Rectangle;
+}());
+// use interface extended by an type for implementing a Class constraint
+var RectanglePrism = /** @class */ (function () {
+    function RectanglePrism() {
+        this.x = 2;
+        this.y = 3;
+        this.z = 4;
+    }
+    return RectanglePrism;
+}());
+var Rectangle2 = /** @class */ (function () {
+    function Rectangle2() {
+        this.x = 2;
+        this.y = 3;
+    }
+    Rectangle2.prototype.area = function () {
+        return this.x * this.y;
+    };
+    Rectangle2.prototype.perimeter = function () {
+        return 2 * (this.x + this.y);
+    };
+    return Rectangle2;
+}());

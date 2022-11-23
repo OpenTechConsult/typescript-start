@@ -1,0 +1,2 @@
+// union
+var confused = 'hello';
